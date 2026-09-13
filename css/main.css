@@ -1,0 +1,1319 @@
+:root {
+  --main-color: rgb(203, 254, 28);
+  --main-color-dark: rgb(164, 204, 23);
+  --main-bg-color: rgb(11, 14, 19);
+  --card-bg: rgb(24, 28, 36);
+  --contact-bg: rgb(16, 23, 38);
+  --contact-card: rgb(30, 41, 57);
+  --muted: rgb(151, 161, 177);
+  --border: rgb(43, 54, 69);
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--main-bg-color);
+  color: #fff;
+  font-family: "Chakra Petch", sans-serif;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+section {
+  scroll-margin-top: 86px;
+}
+
+.section {
+  padding: 85px 0;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.site-header {
+  position: fixed;
+
+  z-index: 1000;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  background: rgba(7, 10, 14, 0.96);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(14px);
+}
+
+.navbar {
+  min-height: 100px;
+}
+
+.navbar-brand {
+  color: var(--main-color);
+
+  font-family: "Chakra Petch", sans-serif;
+
+  font-weight: 700;
+
+  font-size: 21px;
+}
+
+.navbar-brand:hover {
+  color: var(--main-color);
+}
+
+.brand-icon {
+  width: 28px;
+  height: 22px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #0b0e12;
+
+  background: var(--main-color);
+
+  border-radius: 9px 9px 7px 7px;
+
+  font-size: 13px;
+}
+
+.nav-link {
+  color: #f4f4f4 !important;
+
+  font-size: 16px;
+
+  font-weight: 400;
+
+  padding: 8px 0 !important;
+
+  transition: 0.25s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--main-color) !important;
+}
+
+.nav-icon {
+  color: #f1f1f1;
+
+  font-size: 19px;
+}
+
+.signin-btn {
+  min-width: 108px;
+
+  height: 44px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 24px;
+
+  background: var(--main-color);
+
+  color: #090c10;
+
+  border-radius: 10px;
+
+  font-weight: 700;
+
+  transition: 0.25s ease;
+}
+
+.signin-btn:hover {
+  color: #090c10;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 30px rgba(203, 254, 28, 0.2);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-section {
+  position: relative;
+  min-height: calc(100vh - 120px);
+  padding: 100px 0 40px;
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+
+  inset: 0;
+
+  background: url("../images/hero-bg.jpg") center / cover no-repeat;
+
+  filter: saturate(0.75);
+
+  transform: scale(1.04);
+}
+
+.hero-bg::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: radial-gradient(
+    circle at 78% 50%,
+    rgba(83, 255, 0, 0.09),
+    transparent 27%
+  );
+}
+
+.hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.87);
+}
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+}
+
+.hero-copy h1 {
+  margin: 0;
+
+  font-family: "Days One", sans-serif;
+
+  font-weight: 400;
+
+  font-size: 60px;
+
+  line-height: 1.05;
+
+  letter-spacing: 0;
+}
+
+.hero-copy h1 span {
+  display: block;
+}
+
+.hero-copy h1 .lime {
+  color: var(--main-color);
+}
+
+.hero-copy p {
+  max-width: 650px;
+
+  margin: 34px 0 32px;
+
+  color: #c3c8d0;
+
+  font-size: 16px;
+
+  line-height: 1.75;
+}
+
+.hero-buttons {
+  align-items: center;
+}
+
+.btn-main,
+.btn-outline {
+  min-height: 64px;
+
+  padding: 0 32px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  font-family: "Chakra Petch", sans-serif;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  transition: 0.25s ease;
+}
+
+.btn-main {
+  background: var(--main-color);
+
+  color: #090c10;
+}
+
+.btn-main:hover {
+  color: #090c10;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 30px rgba(203, 254, 28, 0.2);
+}
+
+.btn-outline {
+  border: 2px solid var(--main-color);
+
+  color: var(--main-color);
+
+  background: transparent;
+}
+
+.btn-outline:hover {
+  color: #090c10;
+
+  background: var(--main-color);
+}
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero-image-wrap {
+  position: relative;
+
+  width: min(100%, 620px);
+
+  margin-left: auto;
+
+  padding: 4px;
+
+  border-radius: 25px;
+
+  background: linear-gradient(135deg, var(--main-color), #12dc78);
+}
+
+.hero-image {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+
+  height: 420px;
+
+  object-fit: cover;
+
+  border-radius: 20px;
+}
+
+.players-badge {
+  position: absolute;
+
+  left: -25px;
+
+  bottom: -20px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 22px 28px;
+
+  background: #11161d;
+
+  border: 1px solid #36404d;
+
+  border-radius: 10px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.players-badge i {
+  color: var(--main-color);
+
+  font-size: 25px;
+}
+
+.players-badge small,
+.players-badge strong {
+  display: block;
+}
+
+.players-badge small {
+  color: #929aa7;
+
+  margin-bottom: 3px;
+
+  font-size: 13px;
+}
+
+.players-badge strong {
+  font-family: "Days One", sans-serif;
+
+  font-size: 21px;
+
+  font-weight: 400;
+}
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.section-heading .eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 17px;
+
+  color: var(--main-color);
+
+  font-family: "Chakra Petch", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.eyebrow span {
+  width: 65px;
+
+  height: 2px;
+
+  background: var(--main-color);
+}
+
+.section-heading h2 {
+  margin: 24px 0 0;
+
+  color: #f7f7f7;
+
+  font-family: "Days One", sans-serif;
+
+  font-size: 48px;
+
+  font-weight: 400;
+
+  line-height: 1.15;
+}
+
+.section-heading h3 {
+  margin: 10px 0 0;
+
+  font-family: "Days One", sans-serif;
+
+  font-size: 32px;
+
+  font-weight: 400;
+}
+
+.section-heading h3 span {
+  color: var(--main-color);
+}
+
+.section-heading p {
+  margin: 24px auto 0;
+
+  color: var(--muted);
+
+  font-size: 17px;
+}
+
+/* =========================================================
+   OUR GAMES
+========================================================= */
+
+.games-section {
+  background: #0b0e13;
+}
+
+.games-viewport {
+  width: 100%;
+
+  overflow: hidden;
+
+  margin-top: 45px;
+}
+
+.games-track {
+  display: flex;
+
+  gap: 25px;
+
+  width: max-content;
+
+  transition: transform 0.6s ease;
+}
+
+.game-card {
+  position: relative;
+
+  flex: 0 0 calc((min(1320px, calc(100vw - 48px)) - 50px) / 3);
+
+  height: 410px;
+
+  overflow: hidden;
+
+  border-radius: 17px;
+
+  background: #111;
+
+  border: 2px solid transparent;
+
+  outline: none;
+
+  transition: 0.35s ease;
+}
+
+.game-card:hover,
+.game-card:focus {
+  transform: translateY(-6px);
+
+  border-color: var(--main-color);
+}
+
+.game-card img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 0.5s ease;
+}
+
+.game-card:hover img,
+.game-card:focus img {
+  transform: scale(1.07);
+}
+
+.game-card::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95),
+    rgba(0, 0, 0, 0.02) 72%
+  );
+}
+
+.game-card-content {
+  position: absolute;
+
+  z-index: 2;
+
+  left: 25px;
+
+  right: 25px;
+
+  bottom: 24px;
+
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  transition: 0.35s ease;
+}
+
+.game-card:hover .game-card-content,
+.game-card:focus .game-card-content,
+.featured-game .game-card-content {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+.tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.tags span {
+  padding: 7px 12px;
+
+  border-radius: 999px;
+
+  background: rgba(12, 16, 20, 0.84);
+
+  color: #e8ebef;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+.tags i {
+  color: var(--main-color);
+
+  margin-right: 5px;
+}
+
+.game-card h3 {
+  margin: 16px 0 0;
+
+  font-family: "Days One", sans-serif;
+
+  font-size: 19px;
+
+  font-weight: 400;
+}
+
+/* =========================================================
+   CAROUSEL SLIDES
+========================================================= */
+
+#slide-1:checked ~ .games-viewport .games-track {
+  transform: translateX(0);
+}
+
+#slide-2:checked ~ .games-viewport .games-track {
+  transform: translateX(
+    calc(-1 * ((min(1320px, calc(100vw - 48px)) - 50px) / 3 + 25px))
+  );
+}
+
+#slide-3:checked ~ .games-viewport .games-track {
+  transform: translateX(
+    calc(-2 * ((min(1320px, calc(100vw - 48px)) - 50px) / 3 + 25px))
+  );
+}
+
+#slide-4:checked ~ .games-viewport .games-track {
+  transform: translateX(
+    calc(-3 * ((min(1320px, calc(100vw - 48px)) - 50px) / 3 + 25px))
+  );
+}
+
+#slide-5:checked ~ .games-viewport .games-track {
+  transform: translateX(
+    calc(-4 * ((min(1320px, calc(100vw - 48px)) - 50px) / 3 + 25px))
+  );
+}
+
+/* =========================================================
+   CAROUSEL BUTTONS
+========================================================= */
+
+.games-controls {
+  margin-top: 30px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 16px;
+}
+
+.circle-btn {
+  width: 60px;
+
+  height: 60px;
+
+  flex: 0 0 60px;
+
+  border-radius: 50%;
+
+  border: 2px solid #34404e;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: transparent;
+
+  color: #9ca4b0;
+
+  transition: 0.25s ease;
+
+  cursor: pointer;
+}
+
+.circle-btn:hover {
+  border-color: var(--main-color);
+
+  color: var(--main-color);
+}
+
+.game-prev,
+.game-next {
+  display: none;
+}
+
+#slide-1:checked ~ .games-controls .prev-1,
+#slide-1:checked ~ .games-controls .next-1 {
+  display: inline-flex;
+}
+
+#slide-2:checked ~ .games-controls .prev-2,
+#slide-2:checked ~ .games-controls .next-2 {
+  display: inline-flex;
+}
+
+#slide-3:checked ~ .games-controls .prev-3,
+#slide-3:checked ~ .games-controls .next-3 {
+  display: inline-flex;
+}
+
+#slide-4:checked ~ .games-controls .prev-4,
+#slide-4:checked ~ .games-controls .next-4 {
+  display: inline-flex;
+}
+
+#slide-5:checked ~ .games-controls .prev-5,
+#slide-5:checked ~ .games-controls .next-5 {
+  display: inline-flex;
+}
+
+.view-games-btn {
+  min-height: 64px;
+
+  padding: 0 30px;
+
+  margin-left: 18px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 2px solid var(--main-color);
+
+  border-radius: 8px;
+
+  color: var(--main-color);
+
+  font-weight: 700;
+
+  transition: 0.25s ease;
+}
+
+.view-games-btn:hover {
+  color: #0b0e12;
+
+  background: var(--main-color);
+}
+
+/* =========================================================
+   WHAT WE DO
+========================================================= */
+
+.services-section {
+  background: #0b0e13;
+}
+
+.services-grid {
+  margin-top: 65px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+}
+
+.service-card,
+.service-image {
+  min-height: 310px;
+
+  border-radius: 17px;
+
+  overflow: hidden;
+}
+
+.service-card {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-direction: column;
+
+  padding: 30px;
+
+  background: #181b20;
+
+  border: 1px solid #29323d;
+
+  text-align: center;
+
+  transition: 0.35s ease;
+}
+
+.service-card:hover,
+.service-card.active-service {
+  transform: translateY(-7px);
+
+  border-color: var(--main-color);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.service-card i {
+  width: 70px;
+
+  height: 70px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 25px;
+
+  border-radius: 10px;
+
+  background: #172033;
+
+  color: var(--main-color);
+
+  font-size: 27px;
+
+  transition: 0.3s ease;
+}
+
+.service-card:hover i {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+.service-card.active-service::before,
+.service-card.active-service::after {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  border-color: var(--main-color);
+}
+.service-card.active-service::before {
+  left: 0;
+  top: 0;
+  border-top: 2px solid var(--main-color);
+  border-left: 2px solid var(--main-color);
+}
+.service-card.active-service::after {
+  right: 0;
+  bottom: 0;
+  border-right: 2px solid var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+}
+.service-card h4 {
+  margin: 0;
+  font-family: "Days One", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+.service-image {
+  position: relative;
+}
+.service-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 45%, rgba(0, 0, 0, 0.25));
+  pointer-events: none;
+}
+.service-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 310px;
+  object-fit: cover;
+  transition: 0.55s ease;
+}
+.service-image:hover img {
+  transform: scale(1.08);
+}
+.logo-section {
+  padding: 45px 0 60px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at center, rgba(190, 255, 0, 0.18), transparent 38%),
+    #0b0e12;
+}
+.logo-track {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.logo-track::before,
+.logo-track::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  pointer-events: none;
+}
+.logo-track::before {
+  left: 0;
+  background: linear-gradient(to right, #0b0e12, transparent);
+}
+.logo-track::after {
+  right: 0;
+  background: linear-gradient(to left, #0b0e12, transparent);
+}
+.logo-row {
+  width: max-content;
+  display: flex;
+  gap: 18px;
+  animation: move-left 30s linear infinite;
+}
+.logo-track.reverse .logo-row {
+  animation-name: move-right;
+}
+.logo-row img {
+  width: 130px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 13px;
+}
+.logo-track + .logo-track {
+  margin-top: 18px;
+}
+@keyframes move-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes move-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.team-section {
+  background: #0b0e13;
+}
+.team-card {
+  position: relative;
+  height: 390px;
+  overflow: hidden;
+  border-radius: 17px;
+  background: #15171a;
+  cursor: pointer;
+  outline: none;
+}
+.team-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: 0.45s ease;
+}
+.team-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 45%;
+  padding: 26px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.95) 42%);
+  transform: translateY(0);
+  transition: 0.45s ease;
+}
+.team-code {
+  position: absolute;
+  right: 15px;
+  bottom: 65px;
+  writing-mode: vertical-rl;
+  color: #ddd;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.team-overlay h3 {
+  margin: 0 0 7px;
+  font-family: "Days One", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.25;
+  max-width: 85%;
+}
+.team-overlay p {
+  margin: 0 0 4px;
+  color: #c9ced7;
+  font-size: 14px;
+}
+.team-overlay small {
+  color: #9299a4;
+  font-size: 13px;
+}
+.team-card:hover img,
+.team-card:focus img {
+  filter: grayscale(0);
+  transform: scale(1.06);
+}
+.team-card:hover .team-overlay,
+.team-card:focus .team-overlay {
+  min-height: 100%;
+  padding-bottom: 30px;
+  background: none;
+  border-top: 1px solid rgba(203, 254, 28, 0.35);
+}
+.team-card:hover .team-code,
+.team-card:focus .team-code {
+  color: var(--main-color);
+}
+.contact-section {
+  background: var(--contact-bg);
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.contact-item {
+  min-height: 125px;
+  padding: 34px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-radius: 16px;
+  background: var(--contact-card);
+}
+.contact-item > i {
+  width: 68px;
+  height: 68px;
+  flex: 0 0 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--main-color);
+  color: #0b0e12;
+  font-size: 25px;
+}
+.contact-item h4 {
+  margin: 0 0 4px;
+  font-family: "Days One", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+.contact-item p {
+  margin: 0;
+  color: #9da7b7;
+  font-size: 16px;
+}
+.community-card {
+  padding: 34px;
+  border-radius: 16px;
+  background: linear-gradient(115deg, var(--main-color), #11dc7b);
+  color: #09100d;
+}
+.community-card h3 {
+  margin: 0 0 18px;
+  font-family: "Days One", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+.community-card p {
+  margin: 0;
+  font-size: 17px;
+}
+.contact-form {
+  padding: 34px;
+  border-radius: 16px;
+  background: var(--contact-card);
+}
+.contact-form h3 {
+  margin: 0 0 27px;
+  font-family: "Days One", sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+}
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #e3e6eb;
+  font-size: 15px;
+  font-weight: 600;
+}
+.contact-form input:not(.check),
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px 16px;
+  border: 1px solid #465267;
+  border-radius: 8px;
+  outline: none;
+  background: #374357;
+  color: #fff;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 16px;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #a2aaba;
+}
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: var(--main-color);
+  box-shadow: 0 0 0 2px rgba(203, 254, 28, 0.08);
+}
+.contact-form .check {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--main-color);
+}
+.contact-form .check + label {
+  color: #a5adbc;
+  font-weight: 400;
+}
+.contact-form .btn-main {
+  width: 100%;
+  cursor: pointer;
+}
+.support-box {
+  margin-top: 28px;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  border-radius: 16px;
+  background: var(--contact-card);
+  text-align: center;
+}
+.support-box div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.support-box strong {
+  color: var(--main-color);
+  font-family: "Days One", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+.support-box span {
+  color: #9da7b7;
+  font-size: 16px;
+}
+.footer {
+  padding: 45px 0 15px;
+  background: #000;
+}
+.footer-text {
+  max-width: 430px;
+  margin: 20px 0 24px;
+  color: #8e96a3;
+  line-height: 1.8;
+  font-size: 16px;
+}
+.footer h5 {
+  margin-bottom: 22px;
+  color: #fff;
+  font-family: "Days One", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+.footer a:not(.navbar-brand) {
+  display: block;
+  width: fit-content;
+  margin-bottom: 12px;
+  color: #8e96a3;
+  font-size: 16px;
+  transition: 0.2s ease;
+}
+.footer a:hover {
+  color: var(--main-color);
+}
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+.social-icons a {
+  margin: 0 !important;
+  font-size: 18px !important;
+}
+.footer-bottom {
+  margin-top: 35px;
+  padding-top: 20px;
+  border-top: 1px solid #202832;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: #737b87;
+  font-size: 16px;
+}
+.footer-bottom div {
+  display: flex;
+  gap: 28px;
+}
+.footer-bottom a {
+  margin: 0 !important;
+}
+@media (max-width: 1199px) {
+  .nav-links {
+    gap: 22px !important;
+  }
+  .game-card {
+    flex-basis: calc((100vw - 80px - 50px) / 3);
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 991px) {
+  .navbar {
+    padding: 14px 0;
+  }
+  .nav-links,
+  .nav-actions {
+    display: none !important;
+  }
+  .hero-section {
+    padding-top: 130px;
+  }
+  .hero-copy {
+    text-align: center;
+  }
+  .hero-copy p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .hero-image-wrap {
+    margin: 25px auto 0;
+  }
+  .hero-copy h1 {
+    font-size: 52px;
+  }
+  .section-heading h2 {
+    font-size: 42px;
+  }
+  .game-card {
+    flex-basis: calc((100vw - 70px) / 2);
+  }
+  .hero-image {
+    height: 380px;
+  }
+}
+@media (max-width: 767px) {
+  .section {
+    padding: 65px 0;
+  }
+  .hero-copy h1 {
+    font-size: 43px;
+  }
+  .hero-copy p {
+    font-size: 15px;
+  }
+  .hero-image-wrap {
+    width: 92%;
+  }
+  .hero-image {
+    height: 300px;
+  }
+  .players-badge {
+    left: -8px;
+    bottom: -20px;
+    padding: 16px 18px;
+  }
+  .section-heading h2 {
+    font-size: 34px;
+  }
+  .section-heading h3 {
+    font-size: 25px;
+  }
+  .game-card {
+    flex-basis: calc(100vw - 48px);
+    height: 360px;
+  }
+  .games-controls {
+    flex-wrap: wrap;
+  }
+  .view-games-btn {
+    margin-left: 0;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-card,
+  .service-image {
+    min-height: 270px;
+  }
+  .service-image img {
+    min-height: 270px;
+  }
+  .team-card {
+    height: 380px;
+  }
+  .contact-item {
+    padding: 25px;
+  }
+}
+@media (max-width: 480px) {
+  .hero-copy h1 {
+    font-size: 34px;
+  }
+  .btn-main,
+  .btn-outline {
+    width: 100%;
+  }
+  .game-card {
+    height: 340px;
+  }
+  .contact-form {
+    padding: 25px;
+  }
+  .contact-item {
+    align-items: flex-start;
+  }
+  .contact-item > i {
+    width: 60px;
+    height: 60px;
+    flex-basis: 70px;
+  }
+  .support-box {
+    grid-template-columns: 1fr;
+  }
+}
